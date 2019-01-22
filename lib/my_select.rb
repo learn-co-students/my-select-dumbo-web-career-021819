@@ -1,3 +1,9 @@
 def my_select(collection)
- # your code here!
+  temparray = []
+  collection.each do |item|
+    if yield(item)
+      temparray << item
+    end
+  end
+  temparray
 end
